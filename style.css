@@ -97,6 +97,11 @@ h2 {
   color: #555;
 }
 
+.motto {
+  font-style: italic;
+  color: #6b6b6b;
+}
+
 .hero-section p {
   margin-bottom: 14px;
   color: #333;
@@ -108,6 +113,13 @@ h2 {
   height: auto;
   border-radius: 12px;
   border: 1px solid #eee;
+}
+
+.hero-portrait {
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* SECTIONS */
@@ -134,6 +146,11 @@ section p {
   margin: 0 0 12px;
   color: #333;
   font-size: 16px;
+}
+
+section ul {
+  margin: 0 0 12px;
+  padding-left: 1.5em;
 }
 
 /* SEO META KEYWORDS - HIDDEN */
