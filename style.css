@@ -99,19 +99,34 @@ nav a:hover {
 /* HAMBURGER BUTTON */
 .hamburger {
   display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
+  background: var(--bg-header);
+  border: 1.5px solid var(--border);
+  font-size: 20px;
   cursor: pointer;
   color: var(--text);
-  padding: 4px 8px;
+  padding: 7px 14px;
   border-radius: 6px;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease;
   line-height: 1;
+  font-weight: 700;
+}
+
+.hamburger::after {
+  content: ' MENU';
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
 }
 
 .hamburger:hover {
   background: var(--border);
+  border-color: var(--text-secondary);
+}
+
+.hamburger:active {
+  background: var(--border);
+  transform: scale(0.97);
 }
 
 /* MAIN CONTENT */
@@ -343,11 +358,22 @@ footer a:hover {
     border-top: 1px solid var(--border);
     padding: 8px 0;
     margin-top: 4px;
+    gap: 4px;
+  }
+
+  .lang-link {
+    border-left: none;
+    padding: 4px 10px;
+  }
+
+  .lang-link:first-child {
+    border-left: none;
+    padding-left: 10px;
   }
 
   .hero-section {
     gap: 20px;
-    padding: 4px 0 20px;
+    padding: 2px 0 20px;
   }
 
   h2 {
@@ -355,7 +381,7 @@ footer a:hover {
   }
 
   main {
-    padding: 20px 16px;
+    padding: 10px 16px 20px;
   }
 
   section h3 {
@@ -374,7 +400,7 @@ footer a:hover {
   }
 
   main {
-    padding: 16px 14px;
+    padding: 8px 14px 16px;
   }
 
   section h3 {
@@ -388,6 +414,6 @@ footer a:hover {
 
   .hero-section {
     gap: 16px;
-    padding: 2px 0 16px;
+    padding: 0 0 16px;
   }
 }
