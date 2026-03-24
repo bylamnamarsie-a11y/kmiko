@@ -19,7 +19,7 @@
 
 body {
   font-family: 'Nunito Sans', system-ui, -apple-system, Segoe UI, sans-serif;
-  line-height: 1.7;
+  line-height: 1.5;
   color: var(--text);
   background: var(--bg);
 }
@@ -116,13 +116,16 @@ h2 {
 
 .motto {
   color: var(--accent);
+  font-size: 28px;
+  line-height: 1.2;
+  max-width: 14em;
 }
 
 .hero-section p {
   margin-bottom: 16px;
   color: var(--text-secondary);
   font-size: 16.5px;
-  line-height: 1.75;
+  line-height: 1.55;
 }
 
 .hero-section img {
@@ -172,7 +175,7 @@ section p {
   margin: 0 0 14px;
   color: var(--text-secondary);
   font-size: 16px;
-  line-height: 1.75;
+  line-height: 1.55;
 }
 
 section ul {
