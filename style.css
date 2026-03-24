@@ -35,7 +35,7 @@ header {
 
 nav {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 20px;
   padding: 16px 20px;
   max-width: var(--max);
@@ -49,6 +49,7 @@ nav a {
   font-weight: 600;
   font-size: 15px;
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -56,8 +57,24 @@ nav a:hover {
   text-decoration: none;
 }
 
+.nav-links {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: center;
+  flex: 1;
+}
+
 .nav-spacer {
   flex: 1;
+}
+
+.lang-links {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
 }
 
 .lang-link {
@@ -66,9 +83,10 @@ nav a:hover {
   font-size: 14px !important;
   font-weight: 500 !important;
   color: var(--text-secondary) !important;
+  white-space: nowrap;
 }
 
-.lang-link:first-of-type {
+.lang-link:first-child {
   padding-left: 12px;
   border-left: 1px solid var(--border);
 }
@@ -76,6 +94,24 @@ nav a:hover {
 .lang-link.active {
   font-weight: 700 !important;
   color: var(--accent) !important;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text);
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  line-height: 1;
+}
+
+.hamburger:hover {
+  background: var(--border);
 }
 
 /* MAIN CONTENT */
@@ -261,12 +297,48 @@ footer a:hover {
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
   nav {
-    gap: 12px;
-    padding: 14px 16px;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 10px 16px;
+    position: relative;
   }
 
-  nav a {
-    font-size: 14px;
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 15px;
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-spacer {
+    display: none;
+  }
+
+  .lang-links {
+    margin-left: auto;
   }
 
   .hero-section {
@@ -284,21 +356,6 @@ footer a:hover {
 
   section h3 {
     font-size: 26px;
-  }
-
-  .nav-spacer {
-    display: none;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .lang-link {
-    padding-left: 0;
-    border-left: none;
-    padding-top: 8px;
   }
 }
 
