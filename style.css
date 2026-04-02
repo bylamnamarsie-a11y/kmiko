@@ -73,7 +73,7 @@ nav a:hover {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 0;
+  gap: 8px;
   white-space: nowrap;
 }
 
@@ -82,11 +82,8 @@ nav a:hover {
   font-weight: 500 !important;
   color: var(--text-secondary) !important;
   white-space: nowrap;
-}
-
-.lang-link + .lang-link {
-  padding-left: 12px;
-  border-left: 1px solid var(--border);
+  font-style: normal;
+  text-align: center;
 }
 
 .lang-link.active {
@@ -361,11 +358,6 @@ footer a:hover {
 
   .lang-link {
     padding: 4px 10px;
-  }
-
-  .lang-link + .lang-link {
-    border-left: none;
-    padding-left: 10px;
   }
 
   .hero-section {
