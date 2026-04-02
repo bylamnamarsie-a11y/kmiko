@@ -78,15 +78,13 @@ nav a:hover {
 }
 
 .lang-link {
-  padding-left: 12px;
-  border-left: 1px solid var(--border);
   font-size: 14px !important;
   font-weight: 500 !important;
   color: var(--text-secondary) !important;
   white-space: nowrap;
 }
 
-.lang-link:first-child {
+.lang-link + .lang-link {
   padding-left: 12px;
   border-left: 1px solid var(--border);
 }
@@ -362,11 +360,10 @@ footer a:hover {
   }
 
   .lang-link {
-    border-left: none;
     padding: 4px 10px;
   }
 
-  .lang-link:first-child {
+  .lang-link + .lang-link {
     border-left: none;
     padding-left: 10px;
   }
