@@ -1,0 +1,1 @@
+{"title":"Fix language button alignment (PL EN NO)","body":"Fix the CSS for language buttons to remove duplicate borders and improve alignment. The lang-link styling now uses the sibling selector to apply borders only between consecutive buttons."}
